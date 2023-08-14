@@ -42,6 +42,28 @@ lazy val streams = project
     Test / testOptions += Tests.Argument("-o")
   )
 
+lazy val `type-level-programming` = project
+  .settings(
+    organization := org,
+    resolvers ++= Seq(
+      "Akka library repository".at("https://repo.akka.io/maven")
+    ),
+    libraryDependencies ++= Seq(
+//      "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+//      "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+
+//      "org.apache.spark" %% "spark-core" % sparkVersion
+
+      // logging
+      "org.apache.logging.log4j" % "log4j-api" % "2.4.1",
+      "org.apache.logging.log4j" % "log4j-core" % "2.4.1",
+
+      //"ch.qos.logback" % "logback-classic" % LogBack,
+      "org.scalatest" %% "scalatest" % ScalaTest
+    ),
+    publishArtifact := true,
+    Test / testOptions += Tests.Argument("-o")
+  )
 
 ThisBuild / scalaVersion := Scala
 ThisBuild / scalacOptions ++= Seq(
