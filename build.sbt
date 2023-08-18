@@ -19,10 +19,11 @@ lazy val root = project.in(file("."))
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
       "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+      "com.typesafe.akka" %% "akka-actor-testkit-typed" % AkkaVersion,
       "ch.qos.logback" % "logback-classic" % LogBack,
       "org.scalatest" %% "scalatest" % ScalaTest
     ),
-    publishArtifact := true,
+    publishArtifact := false,
     Test / testOptions += Tests.Argument("-o")
   )
 
@@ -38,7 +39,7 @@ lazy val streams = project
       "ch.qos.logback" % "logback-classic" % LogBack,
       "org.scalatest" %% "scalatest" % ScalaTest
     ),
-    publishArtifact := true,
+    publishArtifact := false,
     Test / testOptions += Tests.Argument("-o")
   )
 
