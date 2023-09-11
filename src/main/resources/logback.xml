@@ -14,7 +14,7 @@
         <encoder>
 <!--            <pattern>%coloredLevel [%.13thread] %logger{15} - %message%n%xException{10}</pattern>-->
 <!--            <pattern>%date [%level] from %logger in %thread - %message%n%xException</pattern>-->
-            <pattern>[%level] %thread - %mdc{akkaSource} %message%n%xException</pattern>
+            <pattern>%d{HH:mm:ss}[%level] %thread - %mdc{akkaSource} %message%n%xException</pattern>
 
         </encoder>
     </appender>
